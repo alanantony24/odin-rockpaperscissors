@@ -57,11 +57,19 @@ function playOneRound(playerSelection, computerSelection) {
 }
 
 function displayResult(playerSelection, computerSelection, result) {
+    
     document.getElementById('playerSelection').textContent =  "Player Selection : " + playerSelection;
     document.getElementById('computerSelection').textContent = "Computer Selection : " + computerSelection;
     document.getElementById('playerScore').textContent = "Player Score : " + result.playerScore;
     document.getElementById('computerScore').textContent = "Computer Score : " + result.computerScore;
     document.getElementById('result').textContent = "Result : " + result.resultString
+
+    if (result.playerScore == 5) {
+        alert("You have won the set! Congratulations");
+    }
+    else if (result.computerScore == 5) {
+        alert("Oh no! You have lost the set! Better luck next time");
+    }
 }
 
 
