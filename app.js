@@ -1,4 +1,4 @@
-function getComputerChoice () {
+function getComputerChoice() {
     const choiceArray = ['Rock', 'Paper', 'Scissors'];
     var randomChoice = Math.floor(Math.random() * choiceArray.length);
     return choiceArray[randomChoice];
@@ -41,29 +41,38 @@ function playOneRound(playerSelection, computerSelection) {
     else if (playerSelection == computerSelection) {
         result.resultString = "TIE";
     }
+
+    displaySelections(playerSelection, computerSelection);
+
     return result;
 }
 
-function game() {
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("Enter your input!").toLowerCase();
-        const computerSelection = getComputerChoice().toLowerCase();
-        console.log("Player : " + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
-        console.log("Computer : " + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1));
-        const result = playOneRound(playerSelection, computerSelection);
-        console.log("Result : " + result.resultString);
-    }
-    console.log("-----------FINAL RESULT----------");
-    if (result.playerScore > result.computerScore) {
-        console.log("Congratulations!! You have won the set!");
-    }
-    else if (result.playerScore == result.computerScore) {
-        console.log("Oh no it's a tie game!! Play once again!");
-    }
-    else {
-        console.log("Yoy have lost the set! Better luck next time!");
-    }
+function displaySelections(playerSelection, computerSelection) {
+    document.getElementById('playerSelection').textContent =  "Player Selection : " + playerSelection;
+    document.getElementById('computerSelection').textContent = "Computer Selection : " + computerSelection;
 }
 
-//play game
-game();
+
+
+
+// function game() {
+//     for (let i = 0; i < 5; i++) {
+//         const playerSelection = prompt("Enter your input!").toLowerCase();
+//         const computerSelection = getComputerChoice().toLowerCase();
+//         console.log("Player : " + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
+//         console.log("Computer : " + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1));
+//         const result = playOneRound(playerSelection, computerSelection);
+//         console.log("Result : " + result.resultString);
+//     }
+//     console.log("-----------FINAL RESULT----------");
+//     if (result.playerScore > result.computerScore) {
+//         console.log("Congratulations!! You have won the set!");
+//     }
+//     else if (result.playerScore == result.computerScore) {
+//         console.log("Oh no it's a tie game!! Play once again!");
+//     }
+//     else {
+//         console.log("Yoy have lost the set! Better luck next time!");
+//     }
+// }
+
