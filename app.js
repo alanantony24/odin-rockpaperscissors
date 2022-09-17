@@ -48,8 +48,8 @@ function game() {
     for (let i = 0; i < 5; i++) {
         const playerSelection = prompt("Enter your input!").toLowerCase();
         const computerSelection = getComputerChoice().toLowerCase();
-        console.log("Player : " + playerSelection.charAt(0).toUpperCase());
-        console.log("Computer : " + computerSelection.charAt(0).toUpperCase());
+        console.log("Player : " + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
+        console.log("Computer : " + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1));
         const result = playOneRound(playerSelection, computerSelection);
         console.log("Result : " + result.resultString);
     }
