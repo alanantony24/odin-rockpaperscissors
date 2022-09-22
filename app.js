@@ -72,27 +72,3 @@ function displayResult(playerSelection, computerSelection, result) {
     }
 }
 
-
-
-
-// function game() {
-//     for (let i = 0; i < 5; i++) {
-//         const playerSelection = prompt("Enter your input!").toLowerCase();
-//         const computerSelection = getComputerChoice().toLowerCase();
-//         console.log("Player : " + playerSelection.charAt(0).toUpperCase() + playerSelection.slice(1));
-//         console.log("Computer : " + computerSelection.charAt(0).toUpperCase() + computerSelection.slice(1));
-//         const result = playOneRound(playerSelection, computerSelection);
-//         console.log("Result : " + result.resultString);
-//     }
-//     console.log("-----------FINAL RESULT----------");
-//     if (result.playerScore > result.computerScore) {
-//         console.log("Congratulations!! You have won the set!");
-//     }
-//     else if (result.playerScore == result.computerScore) {
-//         console.log("Oh no it's a tie game!! Play once again!");
-//     }
-//     else {
-//         console.log("Yoy have lost the set! Better luck next time!");
-//     }
-// }
-
