@@ -66,9 +66,17 @@ function displayResult(playerSelection, computerSelection, result) {
 
     if (result.playerScore == 5) {
         alert("You have won the set! Congratulations");
+        resetScores();
     }
     else if (result.computerScore == 5) {
         alert("Oh no! You have lost the set! Better luck next time");
+        resetScores();
     }
+}
+
+function resetScores() {
+    result.resultString = "";
+    result.computerScore = 0;
+    result.playerScore = 0;
 }
 
